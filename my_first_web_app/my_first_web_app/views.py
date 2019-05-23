@@ -1,6 +1,9 @@
 from random import randint
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+
+def root(request):
+    return HttpResponseRedirect('home')
 
 def home_page(request):
     context = {"name": "Betty Maker"}
@@ -18,6 +21,10 @@ def portfolio_page(request):
     context = {"gallery_images": image_urls}
     response = render(request, "portfolio.html", context)
     return HttpResponse(response)
+
+
+def gallery_page(request):
+    return HttpResponseRedirect('../portfolio')
 
 
 def about_me_page(request):

@@ -19,8 +19,10 @@ from my_first_web_app import views
 
 
 urlpatterns = [
+    path('', views.root),
     path('home/', views.home_page),
     path('portfolio/', views.portfolio_page),
+    path('gallery/', views.gallery_page),
     path('about_me/', views.about_me_page),
     path('favourites/', views.favourites_page)
 ]
