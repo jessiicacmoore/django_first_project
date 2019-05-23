@@ -22,6 +22,11 @@ def home_page(request):
     response = render(request, 'index.html')
     return HttpResponse(response)
 
+def portfolio_page(request):
+    response = render(request, 'portfolio.html')
+    return HttpResponse(response)
+
 urlpatterns = [
     path('home/', home_page),
+    path('portfolio/', portfolio_page)
 ]
