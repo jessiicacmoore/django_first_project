@@ -18,7 +18,7 @@ from django.urls import path
 
 
 def home_page(request):
-    return HttpResponse('hello')
+    return HttpResponse('<h1>This is the home page</h1><p>How cool is this?!</p>')
 
 urlpatterns = [
     path('home/', home_page),
