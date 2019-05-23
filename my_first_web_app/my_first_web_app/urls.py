@@ -41,8 +41,16 @@ def about_me_page(request):
     response = render(request, 'about_me.html', context)
     return HttpResponse(response)
 
+def favourites_page(request):
+    context = {
+        'fave_links': ['https://gitignore.io/']
+    }
+    response = render(request, 'favourites.html', context)
+    return HttpResponse(response)
+
 urlpatterns = [
     path('home/', home_page),
     path('portfolio/', portfolio_page),
     path('about_me/', about_me_page),
+    path('favourites/', favourites_page)
 ]
